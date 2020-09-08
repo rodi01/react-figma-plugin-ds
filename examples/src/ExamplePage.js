@@ -12,9 +12,9 @@ import {
   Text,
   Tip,
   Textarea,
-  Select
+  Select,
 } from "../..";
-import "../../styles/figma-plugin-ds.min.css"
+import "../../styles/figma-plugin-ds.css";
 import Layout from "./components/Layout";
 import Playground from "./components/Playground";
 import ExamplesBoard from "./components/ExamplesBoard";
@@ -25,7 +25,7 @@ export default class ExaplePage extends React.Component {
     super(props, context);
 
     this.state = {
-      selectedComponentCode: ""
+      selectedComponentCode: "",
     };
 
     this.handleSelectComponent = this.handleSelectComponent.bind(this);
@@ -33,7 +33,7 @@ export default class ExaplePage extends React.Component {
 
   handleSelectComponent(componentCode) {
     this.setState({
-      selectedComponentCode: componentCode
+      selectedComponentCode: componentCode,
     });
   }
 
@@ -170,7 +170,7 @@ export default class ExaplePage extends React.Component {
                 options={[
                   { value: 1, label: "Item 1" },
                   { value: 2, label: "Item 2" },
-                  { value: 3, label: "Item 3" }
+                  { value: 3, label: "Item 3" },
                 ]}
               />
               <Select
@@ -180,7 +180,7 @@ export default class ExaplePage extends React.Component {
                 options={[
                   { value: 1, label: "Item 1" },
                   { value: 2, label: "Item 2" },
-                  { value: 3, label: "Item 3" }
+                  { value: 3, label: "Item 3" },
                 ]}
               />
               <Select
@@ -191,7 +191,7 @@ export default class ExaplePage extends React.Component {
                 options={[
                   { value: 1, label: "Item 1" },
                   { value: 2, label: "Item 2" },
-                  { value: 3, label: "Item 3" }
+                  { value: 3, label: "Item 3" },
                 ]}
               />
               <Select
@@ -213,7 +213,7 @@ export default class ExaplePage extends React.Component {
                   { divider: "Group B" },
                   { value: 10, label: "Item GroupB 1" },
                   { value: 11, label: "Item GroupB 2" },
-                  { value: 12, label: "Item GroupB 3" }
+                  { value: 12, label: "Item GroupB 3" },
                 ]}
               />
             </ExamplesBoard>

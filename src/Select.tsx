@@ -85,7 +85,7 @@ class Select extends React.Component<SelectProps, SelectState> {
             style={{ top: "-24px" }}
           >
             {options &&
-              options.map(({ value, label, divider }, i) =>
+              options.map(({ value, label, divider, icon }, i) =>
                 divider ? (
                   <div
                     className="select-menu__divider"
@@ -109,7 +109,11 @@ class Select extends React.Component<SelectProps, SelectState> {
                     onClick={() => this.handleSelectClick(value)}
                     key={`select-option--${i}`}
                   >
-                    <span className="select-menu__list-item-icon"></span>
+                    <span
+                      className={`select-menu__list-item-icon ${
+                        icon ? "icon icon--" + icon : ""
+                      }`}
+                    ></span>
                     <span className="select-menu__list-item-text">{label}</span>
                   </li>
                 )
